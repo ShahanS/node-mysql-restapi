@@ -1,0 +1,114 @@
+{
+	"variables": [],
+	"info": {
+		"name": "node-mysql-restapi",
+		"_postman_id": "8eef2c91-5b13-c296-53ba-8027d70bad18",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://node-mysql-restapi.cfapps.io/api/register",
+			"request": {
+				"url": "https://node-mysql-restapi.cfapps.io/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"teacher\": \"teacherken11@example.com\",\r\n\"students\":\r\n[\r\n\"studentjon@gmail.com\",\r\n\"studenthon@gmail.com\"\r\n]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://node-mysql-restapi.cfapps.io/api/commonstudents?teacher=teacherken1@example.com&teacher=teacherken11@example.com",
+			"request": {
+				"url": {
+					"raw": "https://node-mysql-restapi.cfapps.io/api/commonstudents?teacher=teacherken1@example.com&teacher=teacherken11@example.com",
+					"protocol": "https",
+					"host": [
+						"node-mysql-restapi",
+						"cfapps",
+						"io"
+					],
+					"path": [
+						"api",
+						"commonstudents"
+					],
+					"query": [
+						{
+							"key": "teacher",
+							"value": "teacherken1@example.com",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "teacher",
+							"value": "teacherken11@example.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://node-mysql-restapi.cfapps.io/api/suspend",
+			"request": {
+				"url": "https://node-mysql-restapi.cfapps.io/api/suspend",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"student\" : \"studentjon@gamil.com\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://node-mysql-restapi.cfapps.io/api/retrievefornotifications",
+			"request": {
+				"url": "https://node-mysql-restapi.cfapps.io/api/retrievefornotifications",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"teacher\": \"teacherken@example.com\",\r\n\"notification\": \"Hello students! @studentagnes@example.com @studentmiche@example.com\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
